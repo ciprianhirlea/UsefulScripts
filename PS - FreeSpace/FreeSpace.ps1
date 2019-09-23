@@ -1,4 +1,4 @@
-# Get a list of existing drives and print disk usage
+# Get a list of existing drives and print 
 get-wmiobject win32_logicaldisk |	
 select Name,FileSystem,VolumeName,
 	@{
