@@ -1,2 +1,2 @@
-$path = Read-Host 'Insert Path'
-Get-ChildItem -Path "$path\KMS*" -Directory | ForEach-Object {Rename-Item -Path $_.FullName -NewName ($_.FullName -Replace "\#.+","")}
+$path = Read-Host 'Insert Path' #Ask user for the target directory
+Get-ChildItem -Path "$path\KMS*" -Directory | ForEach-Object {Rename-Item -Path $_.FullName -NewName ($_.FullName -Replace "\#.+","")} #Find directories starting with KMS and delete the '#' from the name and everything after it
