@@ -8,4 +8,4 @@ $images = Get-ChildItem $location | Where-Object {$_.length -gt 40000}
 if (!(test-path $HOME\Pictures\Wallpapers\)){New-Item -Path "$HOME\Pictures\Wallpapers\" -ItemType Directory}
 
 # Copy images to a wallpaper folder
-ForEach ($image in $images) {cp $location\$image $HOME\Pictures\Wallpapers\$image.jpg}
+ForEach ($image in $images) {Copy-Item $location\$image $HOME\Pictures\Wallpapers\$image.jpg}
